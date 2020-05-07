@@ -7,7 +7,7 @@ TODO
 ## Usage
 
 ```py
-from my_lambdata import my_func
+from tigju_lambdata import my_func
 
 x = 5
 
