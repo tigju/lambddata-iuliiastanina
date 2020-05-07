@@ -13,7 +13,11 @@ x = 5
 
 print(enlarge(x))
 
-df = pd.DataFrame({'a': [2, 4, None, None], 'b': [4, None, 4, 5], 'c': ['Cat', 'Dog', 'bird', 'fish'], 'd': [3,4,5,6], 'e':[10,56,89,67]})
+df = pd.DataFrame({'a': [2, 4, None, None], 
+                   'b': [4, None, 4, 5], 
+                   'c': ['Cat', 'Dog', 'bird', 'fish'], 
+                   'd': [3,4,5,6], 
+                   'e':[10,56,89,67]})
 
 # check the null values in dataframe
 print(check_null(df))
