@@ -1,8 +1,11 @@
-# lambddata-iuliiastanina
+# tigju-lambdata
 
 ## Installation
 
-TODO
+```
+# with pip
+pip install -i https://test.pypi.org/simple/ tigju-lambdata
+```
 
 ## Usage
 
