@@ -38,3 +38,5 @@ df = pd.DataFrame({'firsname': ['Anna', 'Peter'],
                    
 print(my_func.date_split(df, 'DOB'))
 ```
+Examples are on colab notebook
+https://colab.research.google.com/drive/1h2wSVxyiqFcr4XY_MFldS21A7blvlgLY?usp=sharing
