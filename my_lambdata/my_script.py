@@ -22,6 +22,5 @@ from my_lambdata import my_func
 # y_pred = pd.DataFrame({"column": ['cat', 'dog', 'dog', 'cat', 'cat', 'cat']})
 # print(my_func.cm(y_true, y_pred))
 
-df=pd.DataFrame({'firsname': ['Anna', 'Peter'], 'lastname':['Smith', 'Peterson'], 'DOB': ['10-12-1988', '01-03-2000']})
-print(df['DOB'])
+df = pd.DataFrame({'firsname': ['Anna', 'Peter'], 'lastname':['Smith', 'Peterson'], 'DOB': ['10-12-1988', '01-03-2000']})
 print(my_func.date_split(df, 'DOB'))
