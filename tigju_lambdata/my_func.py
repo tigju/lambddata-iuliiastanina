@@ -6,10 +6,14 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 
 # enlarge number
+
+
 def enlarge(n):
     return n * 100
 
 # check for nulls
+
+
 def check_null(df):
     X = df.copy()
     null_list = X.isnull().sum()
@@ -19,13 +23,19 @@ def check_null(df):
     return new_df
 
 # split on train/val/test
+
+
 def train_val_test_split(df):
     X = df.copy()
-    train1, test = train_test_split(X, test_size=0.2, random_state=42, shuffle=True)
-    train, val = train_test_split(train1, test_size=0.2, random_state=42, shuffle=True)
+    train1, test = train_test_split(
+        X, test_size=0.2, random_state=42, shuffle=True)
+    train, val = train_test_split(
+        train1, test_size=0.2, random_state=42, shuffle=True)
     return (train, val, test)
 
 # confusion matrix
+
+
 def cm(x, y):
     cm = confusion_matrix(x, y)
     cols = unique_labels(x)
@@ -33,7 +43,9 @@ def cm(x, y):
     plt.figure(figsize=(10, 7))
     return sns.heatmap(df_cm, annot=True, cmap='Blues', fmt='.0f')
 
-# separate day, month, year from date colunm 
+# separate day, month, year from date colunm
+
+
 def date_split(df, date_column):
     X = df.copy()
 
@@ -43,7 +55,7 @@ def date_split(df, date_column):
 
     return X
 
+
 if __name__ == "__main__":
     # only run the code below if executing this file
     print(enlarge(5))
-
