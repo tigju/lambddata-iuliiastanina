@@ -4,6 +4,7 @@ from sklearn.utils.multiclass import unique_labels
 import seaborn as sns
 import matplotlib.pyplot as plt
 
+
 class ConfusionMatrix:
 
     '''
@@ -53,20 +54,20 @@ class ConfusionMatrix:
         return sns.heatmap(self.make_df(), annot=True, cmap=self.color, fmt=self.format_cm)
 
 
-
-
 if __name__ == "__main__":
-    
-    y_true = pd.DataFrame({"column": ['cat', 'dog', 'cat', 'cat', 'dog', 'cat']})
-    y_pred = pd.DataFrame({"column": ['cat', 'dog', 'dog', 'cat', 'cat', 'cat']})
+
+    y_true = pd.DataFrame(
+        {"column": ['cat', 'dog', 'cat', 'cat', 'dog', 'cat']})
+    y_pred = pd.DataFrame(
+        {"column": ['cat', 'dog', 'dog', 'cat', 'cat', 'cat']})
 
     cm1 = ConfusionMatrix(y_true, y_pred, "Dogs and Cats", (6, 4))
-    
+
     print(cm1.x_axis)
-    print(cm1.y_axis) 
+    print(cm1.y_axis)
     print(cm1.title)
-    print(cm1.size) 
-    print(cm1.color) 
+    print(cm1.size)
+    print(cm1.color)
     print(cm1.format_cm)
     print(cm1.cm())
     print(cm1.labels())
