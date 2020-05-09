@@ -10,18 +10,18 @@ class ConfusionMatrix:
     '''
     This class creates and object of confusion matrix for classification predictions
 
-    Params: 
+    Params:
             x_axis (series, true values)
-            y_axis (series, predicted values) 
+            y_axis (series, predicted values)
             title (string, name of the confusion matrix)
             size (tuple, containing 2 integers of width and height of plot. Default (10, 7))
             color (str 'coolwarm', 'YlGnBu', 'BuPu', 'Greens', 'Blues'. Default='Blues')
             format (str how mady decimals to show. Dafault '.0f')
 
-    Returns: 
+    Returns:
             Object (confusion matrix)
 
-    Dependencies: 
+    Dependencies:
                 pandas,
                 confusion_matrix from sklearn.metrics,
                 unique_labels from sklearn.utils.multiclass,
@@ -29,7 +29,8 @@ class ConfusionMatrix:
                 seaborn
     '''
 
-    def __init__(self, x_axis, y_axis, title, size=(10, 7), color='Blues', format_cm='.0f'):
+    def __init__(self, x_axis, y_axis, title, size=(
+            10, 7), color='Blues', format_cm='.0f'):
         self.x_axis = x_axis
         self.y_axis = y_axis
         self.title = title
@@ -51,7 +52,8 @@ class ConfusionMatrix:
 
     def plot_cm(self):
         plt.figure(figsize=self.size)
-        return sns.heatmap(self.make_df(), annot=True, cmap=self.color, fmt=self.format_cm)
+        return sns.heatmap(self.make_df(), annot=True,
+                           cmap=self.color, fmt=self.format_cm)
 
 
 if __name__ == "__main__":
