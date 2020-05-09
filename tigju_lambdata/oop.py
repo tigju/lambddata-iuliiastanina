@@ -13,7 +13,7 @@ class ConfusionMatrix:
         return confusion_matrix(self.x_axis, self.y_axis)
 
     def labels(self):
-        
+        return unique_labels(self.x_axis)
 
 
 if __name__ == "__main__":
@@ -23,4 +23,4 @@ if __name__ == "__main__":
 
     cm1 = ConfusionMatrix(y_true, y_pred, "Example", (6,4))
     
-    print(cm1.cm())
+    print(cm1.labels())
