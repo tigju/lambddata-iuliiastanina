@@ -43,14 +43,23 @@ print(my_func.date_split(df, 'DOB'))
 
 ##############################################################################
 
-from tigju_lambdata import oop
+from tigju_lambdata.oop import ConfusionMatrix
 
 y_true = pd.DataFrame({"column": ['cat', 'dog', 'cat', 'cat', 'dog', 'cat']})
 y_pred = pd.DataFrame({"column": ['cat', 'dog', 'dog', 'cat', 'cat', 'cat']})
 
 cm1 = ConfusionMatrix(y_true, y_pred, "Dogs and Cats", (6,4))
-    
-print(cm1.plot_cm())
+
+    print(cm1.x_axis)
+    print(cm1.y_axis) 
+    print(cm1.title)
+    print(cm1.size) 
+    print(cm1.color) 
+    print(cm1.format_cm)
+    print(cm1.cm())
+    print(cm1.labels())
+    print(cm1.make_df())
+    print(cm1.plot_cm())
 ```
 Examples are on colab notebook
 https://colab.research.google.com/drive/1h2wSVxyiqFcr4XY_MFldS21A7blvlgLY?usp=sharing

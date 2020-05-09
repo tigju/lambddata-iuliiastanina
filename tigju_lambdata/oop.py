@@ -59,6 +59,15 @@ if __name__ == "__main__":
     y_true = pd.DataFrame({"column": ['cat', 'dog', 'cat', 'cat', 'dog', 'cat']})
     y_pred = pd.DataFrame({"column": ['cat', 'dog', 'dog', 'cat', 'cat', 'cat']})
 
-    cm1 = ConfusionMatrix(y_true, y_pred, "Example", (6,4))
+    cm1 = ConfusionMatrix(y_true, y_pred, "Dogs and Cats", (6, 4))
     
+    print(cm1.x_axis)
+    print(cm1.y_axis) 
+    print(cm1.title)
+    print(cm1.size) 
+    print(cm1.color) 
+    print(cm1.format_cm)
+    print(cm1.cm())
+    print(cm1.labels())
+    print(cm1.make_df())
     print(cm1.plot_cm())
