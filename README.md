@@ -40,6 +40,17 @@ df = pd.DataFrame({'firsname': ['Anna', 'Peter'],
                    'DOB': ['10-12-1988', '01-03-2000']})
                    
 print(my_func.date_split(df, 'DOB'))
+
+##############################################################################
+
+from tigju_lambdata import oop
+
+y_true = pd.DataFrame({"column": ['cat', 'dog', 'cat', 'cat', 'dog', 'cat']})
+y_pred = pd.DataFrame({"column": ['cat', 'dog', 'dog', 'cat', 'cat', 'cat']})
+
+cm1 = ConfusionMatrix(y_true, y_pred, "Dogs and Cats", (6,4))
+    
+print(cm1.plot_cm())
 ```
 Examples are on colab notebook
 https://colab.research.google.com/drive/1h2wSVxyiqFcr4XY_MFldS21A7blvlgLY?usp=sharing
