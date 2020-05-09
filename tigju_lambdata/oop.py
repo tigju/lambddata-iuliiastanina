@@ -21,6 +21,7 @@ class ConfusionMatrix:
             Object (confusion matrix)
 
     Dependencies: 
+                pandas,
                 confusion_matrix from sklearn.metrics,
                 unique_labels from sklearn.utils.multiclass,
                 matplotlib.pyplot,
