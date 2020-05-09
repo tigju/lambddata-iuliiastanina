@@ -7,7 +7,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name="tigju_lambdata",  # the name that you will install via pip
-    version="1.2",
+    version="1.2.1",
     author="Iuliia Stanina",
     author_email="iuliia.stanina@gmail.com",
     description="A few basic functions for wrangling data",
