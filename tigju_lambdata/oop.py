@@ -11,8 +11,8 @@ class ConfusionMatrix:
     This class creates and object of confusion matrix for classification predictions
 
     Params:
-            x_axis (lists,series,dataframe, true values)
-            y_axis (lists,series,dataframe, predicted values)
+            x_axis (lists,series,dataframe, true values, must contain same lables as y_axis)
+            y_axis (lists,series,dataframe, predicted values, must contain same lables as x_axis)
             title (string, name of the confusion matrix, Default=None)
             size (tuple, containing 2 integers of width and height of plot. Default (10, 7))
             color (str 'coolwarm', 'YlGnBu', 'BuPu', 'Greens', 'Blues'. Default='Blues')
@@ -76,21 +76,22 @@ if __name__ == "__main__":
     # print(cm1.format_cm)
     # print(cm1.cm())
     # print(cm1.labels())
-    # print(cm1.make_df())
-    # print(cm1.plot_cm())
+   
 
-    list1 = ['cat']
-    list2 = ['cat']
+    list1 = ['cat', 'cat', 'dog']
+    list2 = ['dog', 'dog', 'cat']
 
     cm2 = ConfusionMatrix(list1, list2)
 
-    print(cm2.x_axis)
-    print(cm2.y_axis)
-    print(cm2.title)
-    print(cm2.size)
-    print(cm2.color)
-    print(cm2.format_cm)
-    print(cm2.cm())
-    print(cm2.labels())
-    print(cm2.make_df())
-    print(cm2.plot_cm())
+    # print(cm2.x_axis)
+    # print(cm2.y_axis)
+    # print(cm2.title)
+    # print(cm2.size)
+    # print(cm2.color)
+    # print(cm2.format_cm)
+    # print(cm2.cm())
+    # print(cm2.labels())
+    # print(cm2.make_df())
+    # print(cm2.plot_cm())
+
+
